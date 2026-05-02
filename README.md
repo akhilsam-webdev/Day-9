@@ -1,41 +1,58 @@
-# 🚀 Day-9 – Backend Development with Express.js
+# 🚀 Day-9 – Full-Stack Development with Node.js & Express.js
 
-This project is part of my backend development journey, where I practiced building structured APIs using Node.js and Express.js, improving code organization and handling real-world backend concepts.
+This project is part of my full-stack development journey, where I practiced building structured applications using Node.js and Express.js for the backend, integrated with a frontend to improve code organization and handle real-world development concepts.
 
 ## ⚙️ Tech Stack
-*   **Node.js**: The runtime environment used to execute JavaScript on the server.
-*   **Express.js**: The web framework used to handle routing and middleware.
+*   **Frontend**: React.js / HTML & CSS.
+*   **Backend**: Node.js and Express.js.
 *   **JavaScript (ES6)**: The primary programming language for application logic.
 *   **MongoDB**: Integrated for database storage, managed via environment variables.
 
+## 📦 Packages Used
+### Backend Dependencies
+*   **express**: Fast, unopinionated, minimalist web framework for Node.js.
+*   **mongoose**: Elegant MongoDB object modeling for Node.js to manage database schemas.
+*   **dotenv**: Zero-dependency module that loads environment variables from a `.env` file.
+*   **cors**: Middleware to enable Cross-Origin Resource Sharing for frontend-backend communication.
+*   **nodemon**: Utility that automatically restarts the server when code changes are detected.
+
+### Frontend Dependencies
+*   **react**: A JavaScript library for building user interfaces.
+*   **react-dom**: Entry point to the DOM for React.
+*   **axios**: Promise-based HTTP client used to call backend APIs.
+
 ## 📚 What I Learned
-*   **Structuring backend applications properly**: Learned to separate server initialization in `server.js` from the main application logic in `src/app.js`.
-*   **Creating multiple API routes**: Gained experience defining endpoints to handle specific client requests.
-*   **Handling HTTP methods**: Practiced processing GET, POST, and other standard HTTP methods.
+*   **Structuring Full-Stack applications properly**: Learned to organize the project into dedicated `frontend` and `backend` folders for a clean separation of concerns.
+*   **Creating multiple API routes**: Gained experience defining endpoints to handle specific client requests from the frontend.
+*   **Handling HTTP methods**: Practiced processing GET, POST, and other standard HTTP methods to interact with data.
 *   **Working with middleware in Express**: Implemented middleware functions to process data during the request-response cycle.
 *   **Understanding request-response lifecycle deeply**: Improved my grasp of how the server receives, processes, and responds to client data.
 *   **Basics of database integration**: Successfully connected the application to MongoDB Atlas using connection strings.
 
 ## ✨ Features
-*   **Express server setup**: Clean and modular server initialization.
-*   **Multiple API endpoints**: Organized route handling within the `src/` directory.
+*   **Full-Stack Folder Structure**: Organized project into separate `frontend` and `backend` directories.
+*   **Express server setup**: Clean and modular server initialization within the backend.
+*   **Multiple API endpoints**: Organized route handling within the `backend/src/` directory.
 *   **Middleware usage**: Efficient processing of incoming requests.
 *   **JSON request handling**: Capability to parse and respond with structured JSON data.
-*   **Clean and scalable project structure**: Follows industry best practices for folder organization.
 
 ## 📂 Project Structure
 Referencing the **akhilsam-webdev/Day-9** file structure:
 
 ```text
 Day-9/
-│
-├── src/
-│   └── app.js           # Express application logic, routes, and middleware
-├── .env                 # Environment variables (DB URLs, Port)
-├── .gitignore           # Prevents tracking of node_modules and .env
-├── package.json         # Project metadata and dependencies
-├── package-lock.json    # Version locking for dependencies
-└── server.js            # Entry point to start the HTTP server
+├── backend/
+│   ├── src/
+│   │   └── app.js       # Express application logic, routes, and middleware
+│   ├── .env             # Environment variables (DB URLs, Port)
+│   ├── .gitignore       # Prevents tracking of node_modules and .env
+│   ├── package.json     # Backend metadata and dependencies
+│   └── server.js        # Entry point to start the HTTP server
+├── frontend/
+│   ├── src/             # Frontend source code
+│   ├── public/          # Public assets
+│   ├── package.json     # Frontend metadata and dependencies
+│   └── .gitignore       # Prevents tracking of node_modules
 ```
 
 ---
@@ -49,24 +66,32 @@ cd Day-9
 ```
 
 ### 2️⃣ Install Dependencies
+**For Backend:**
 ```bash
+cd backend
 npm install
 ```
 
-### 3️⃣ Run the Server
+**For Frontend:**
 ```bash
-node server.js
+cd ../frontend
+npm install
+```
+
+### 3️⃣ Run the Project
+**Start Backend:**
+```bash
+cd backend
+npm start
+```
+
+**Start Frontend:**
+```bash
+cd frontend
+npm start
 ```
 
 ---
-
-## 🔌 API Usage
-Run the server and open:
-*   `http://localhost:3000`
-
-Test endpoints using:
-*   **Browser** (for simple GET requests)
-*   **Postman / Thunder Client** (recommended for testing full CRUD operations)
 
 ## 👨‍💻 Author
 **Akhil Sambasivan**
